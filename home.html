@@ -4,210 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <style>
-      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    
-}
-.navbar h1 {
-    color: #fff;
-    margin: 0;
-}
-.topics {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    margin-right: 200px;
-}
-.topics li {
-    position: relative;
-    
-}
-.topics a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
-    font-size: 1.3rem;
-    
-}
-.topics a:hover {
-    background-color: #575757;
-}
-.dropdown {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown a {
-    padding: 12px 16px;
-    display: block;
-}
-.dropdown a:hover {
-    background-color: #575757;
-}
-.topics li:hover .dropdown {
-    display: block;
-}
-.login{
-    display: flex;
-    margin-left: 100px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-    
-}
-.login a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
-    font-size: 1.3rem;
-    
-}
-.login button{
-    height: 35px;
-    width: 140px;
-    border-radius: 20px;
-    background-color: orangered;
-}
-.dropdown2{       
-    background-color: #333;
-    min-width: 230px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin-left: 170px;
-    margin-top: -200px;
-}
-.dropdown2 a {
-    padding: 12px 16px;
-    display: block;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-    .news {
-        display:flex;
-        gap:20px;
-        flex-wrap: wrap;
-    }
-    .news .news1{
-        height: 600px;
-        width:47%;
-        padding:20px;
-        border:2px solid black;
-    }
-    
-    .news .news1 p{
-        font-size: 24px;
-       
-    }
-    .news  img{
-        width:200px;
-        height:200px;
-        margin-bottom: 40px;
-        margin-left: 80px;
-
-    }
-    .news h1{
-        font-size: 18px;
-        color: blue;
-    }
-
-    .news .news2{
-        width:47%;
-        float:right;
-        border: 2px solid black;
-    }
-    .news .news2 p{
-        font-size: 24px;
-        padding: 0px 30px;
-        
-    }
-    .news .news2 span{
-        font-size: 20px;
-        padding:10px;
-        justify-content: center;
-    }
-
-
-    .news .news3{
-        width:47%;
-        float:right;
-        border: 2px solid black;
-    }
-
-    .news .news3 p{
-        font-size: 24px;
-        padding: 0px 30px;
-        
-    }
-    .news .news3 span{
-        font-size: 20px;
-        padding:10px;
-        justify-content: center;
-    }
-
-    .news .news4{
-        width:47%;
-        float:right;
-        border: 2px solid black;
-    }
-    .news .news4 p{
-        font-size: 24px;
-        padding: 0px 30px;
-        
-    }
-    .news .news4 span{
-        font-size: 20px;
-        padding:10px;
-        justify-content: center;
-    }
-
-    
 </style>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Nexus</title>
-        <link rel="stylesheet" href="Nexus.css">
-        
-    </head>
-    <body>
         <nav class="navbar">
             <h1>AI Nexus</h1>
             <ul class="topics">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-               
                 <li>
                     <a href="#">Resources</a>
                     <div class="dropdown">
@@ -229,15 +36,81 @@
                 </ul>
                 <ul class="login">
                 <li style="margin-top: 5px;"  ><a href="#">Login</a></li>
-                 <l> <button><a href="#">Sign up</a></button></li>
+                 <li> <button><a href="#">Sign up</a></button></li>
                     <!-- <li> <a href=""></a><button>Sign up</button></li> -->
             </ul>
         </nav>
-    </body>
-    </html>
 
 
 
+
+
+     <span class="s1">Trending News</span>
+     <p class="p1">The updates related to AI technologies</p>
+     <iframe src="https://www.youtube.com/embed/-HhtSGYC0_w?si=tYKXF77D19v9o979" class="frame"></iframe>
+     <p class="p2">Security news coverage encompasses investigative cybersecurity reporting and analysis on the latest security breaches,
+         hacks and cyberattacks around the globe.</p>
+     <img src="images/AI2.jpg" class="img2">
+     <a href="#" class="p3"><p>The destruction cause by AI</p></a>
+     <div class="trend1">
+     <img src="images/AI3.jpg" class="img3">
+     <a href="#" class="p4"><p>The creation of AI based products</p></a>
+    </div>
+    <div class="trend2">
+        <img src="images/AI4.jpg" class="img4">
+        <a href="#" class="p5"><p>The creation of AI based products</p></a>
+    </div>
+    <div class="trend3">
+        <img src="images/AI4.jpg" class="img5">
+        <a href="#" class="p6"><p>The creation of AI based products</p></a>
+    </div>
+    <div class="trend4">
+        <img src="images/AI4.jpg" class="img6">
+        <a href="#" class="p7"><p>The creation of AI based products</p></a>
+    </div>
+    <div class="trend5">
+        <img src="images/AI3.jpg" class="img7">
+        <a href="#" class="p8"><p>The creation of AI based products</p></a>
+    </div>
+       
+    <h1 class="m1">MAJOR UPDATES ON ARTIFICIAL INTELLIGENCE</h1>
+  
+
+    <div class="major-container">
+    <div class="major">
+        <p>Artificial intelligence firms lead Chinese shares higher</p>
+        <h6>What they saw transported them 10,000 miles across the world, 
+            to Zambia, and then 1 more mile straight down into Earth. A rich lode of copper,
+             deep in the bedrock, appeared before them, its contours revealed by a complex artificial
+              intelligence-driven technology they had been painstakingly building for years.
+        </h6>
+    </div>
+    <div class="major">
+        <p>Artificial intelligence firms lead Chinese shares higher</p>
+        <h6>What they saw transported them 10,000 miles across the world, 
+            to Zambia, and then 1 more mile straight down into Earth. A rich lode of copper,
+             deep in the bedrock, appeared before them, its contours revealed by a complex artificial
+              intelligence-driven technology they had been painstakingly building for years.
+        </h6>
+    </div>
+    <div class="major">
+        <p>Artificial intelligence firms lead Chinese shares higher</p>
+        <h6>What they saw transported them 10,000 miles across the world, 
+            to Zambia, and then 1 more mile straight down into Earth. A rich lode of copper,
+             deep in the bedrock, appeared before them, its contours revealed by a complex artificial
+              intelligence-driven technology they had been painstakingly building for years.
+        </h6>
+    </div>
+    <div class="major">
+        <p>Artificial intelligence firms lead Chinese shares higher</p>
+        <h6>What they saw transported them 10,000 miles across the world, 
+            to Zambia, and then 1 more mile straight down into Earth. A rich lode of copper,
+             deep in the bedrock, appeared before them, its contours revealed by a complex artificial
+              intelligence-driven technology they had been painstakingly building for years.
+        </h6>
+    </div>
+</div>
+    
 
 
 
@@ -245,30 +118,34 @@
 
 
       <div class="news">
+        <h1 class="trending">TRENDING TOPICS ON ARTIFICIAL INTELLIGENCE</h1>
         <div class="news1">
             <p>Universities Don’t Want AI Research to Leave Them Behind</p>
-             <img src="AI1.webp">
+             <img src="images/AI1.webp">
             <h1>Outspent by Big Tech, some academics are focusing on research 
                 that requires less computing power, even as they try to build more of it</h1>
         </div>
         <div class="news2">
             <p>Universities Don’t Want AI Research to Leave Them Behind</p>
-            <img src="AI1.webp">
+            <img src="images/AI2.jpg">
             <h1>Outspent by Big Tech, some academics are focusing on research that 
                 requires less computing power, even as they try to build more of it</h1>
         </div>
         <div class="news3">
             <p>Universities Don’t Want AI Research to Leave Them Behind</p>
-            <img src="AI1.webp">
+            <img src="images/AI3.jpg">
             <h1>Outspent by Big Tech, some academics are focusing on research that
                  requires less computing power, even as they try to build more of it</h1>
         </div>
         <div class="news4">
             <p>Universities Don’t Want AI Research to Leave Them Behind</p>
-            <img src="AI1.webp">
+            <img src="images/AI4.jpg">
             <h1>Outspent by Big Tech, some academics are focusing on research that
                  requires less computing power, even as they try to build more of it</h1>
         </div>
+       <button class="btn1">Read More</button>
       </div>
+    
+
 </body>
 </html>
