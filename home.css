@@ -2,6 +2,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
 }
 
 body {
@@ -300,4 +302,282 @@ body {
         font-size: 18px;
         color: grey;
         padding:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .A {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        width: 200%;
+    }
+    .shop, .shop1 {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.5s ease;
+        overflow: hidden;
+    }
+    .shop3 {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        width: 300px; /* Fixed width for consistency */
+    }
+    .shop3 p{
+        font-weight: bold;
+        font-size: 20px;
+        color:green;
+    }
+    .shop3 img{
+        width:300px;
+        height:300px;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+        transition: opacity 0.5s ease;
+    }
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .shop3:hover .image {
+        opacity: 0.5;
+    }
+    .shop3:hover .overlay {
+        opacity: 1;
+    }
+    .AA{
+      margin-left: 600px;
+    }
+    .nextButton, .prevButton {
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+
+
+    .articles{
+        padding: 22px 30px;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin-top: 50px;
+    }
+    .articles h1{
+        color:goldenrod;
+        font-size: 30px;
+        text-align: center;
+    }
+    #ch1{
+        display: none;
+    }
+    .content {
+        display:none;
+    }
+    #ch1:checked ~ .content{
+       display: block;
+    }
+    #ch1:checked ~ label{
+        display: none;
+     }
+    .content label{
+        display: inline-block;
+        width:50px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+    .articles label{
+        display: inline-block;
+        width:100px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+
+
+
+    .article2{
+        padding: 22px 30px;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin-top: 50px;
+    }
+    .article2 #ch2{
+        display: none;
+    }
+    .article2 .content {
+        display:none;
+    }
+    .article2 #ch2:checked ~ .content{
+       display: block;
+    }
+    .article2 #ch2:checked ~ label{
+        display: none;
+     }
+    .article2 .content label{
+        display: inline-block;
+        width:80px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+    .article2 label{
+        display: inline-block;
+        width:100px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+
+
+
+    .article3{
+        padding: 22px 30px;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin-top: 50px;
+    }
+    .article3 #ch3{
+        display: none;
+    }
+    .article3 .content {
+        display:none;
+    }
+    .article3 #ch3:checked ~ .content{
+       display: block;
+    }
+    .article3 #ch3:checked ~ label{
+        display: none;
+     }
+    .article3 .content label{
+        display: inline-block;
+        width:80px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+    .article3 label{
+        display: inline-block;
+        width:100px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+
+
+    .article4{
+        padding: 22px 30px;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin-top: 50px;
+    }
+    .article4 #ch4{
+        display: none;
+    }
+    .article4 .content {
+        display:none;
+    }
+    .article4 #ch4:checked ~ .content{
+       display: block;
+    }
+    .article4 #ch4:checked ~ label{
+        display: none;
+     }
+    .article4 .content label{
+        display: inline-block;
+        width:80px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+    .article4 label{
+        display: inline-block;
+        width:100px;
+        padding-left:3px;
+        margin-top: 12px;
+        cursor: pointer;
+        color:white;
+        background-color: green;
+        border-radius: 5px;
+    }
+
+    .founders{
+        font-size: 35px;
+        margin-left: 480px;
+        margin-bottom: 40px;
+        color:yellowgreen;
+    }
+
+    .f{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 50px;
+        margin-left: 70px;
+    }
+    .f1{
+        height: 450px;
+        width: 350px;
+        padding: 20px 20px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+    }
+    .f1 h1{
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .f1 img{
+        height: 350px;
+        width: 300px;
+        border-radius: 10px;
+        transition-duration: 1s;
+    }
+    .f1 img:hover{
+        width:300px;
+        height:300px;
     }
