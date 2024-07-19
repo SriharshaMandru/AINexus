@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+
+    body{
+        padding:40px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6rem;
+    }
+
+
+    
+
+
+
+    h1{
+        font-size: 45px;
+        margin-left: 550px;
+    }
+    .accordian{
+        background-color: white;
+        padding:4px 16px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 5px blue;
+        cursor: pointer;
+    }
+    .question{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .icon{
+        margin-right: 16px;
+        transition: transform 0.2s;
+    }
+    .icon.active{
+        transform: rotate(-180deg);
+    }
+    .answer{
+        color:gray;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s;
+    }
+    .answer.active {
+        max-height: 1000px;
+    }
+</style>
+<body>
+
+
+
+    <h1>FAQs</h1>
+     <div class="accordian">
+          <div class="question">
+              <h4>1. What are some good AI Projects for Beginners?</h4>
+              <i class="icon  fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="answer">
+            <p>Object Tracking System- An object detection system can detect multiple objects in a picture. You can utilize Kaggle's Open Images Object Detection dataset for this project. SSD is an open-source object dete</p>
+          </div>
+     </div>
+
+     <div class="accordian">
+        <div class="question">
+            <h4>2. Why AI Projects fail?</h4>
+            <i class="icon fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="answer ">
+          <p>Low data quality- Companies should verify that they have sufficient and relevant data from trusted sources representing their business activities, have correct labels, and are acceptable for the AI tool employed before commencing on an AI project.</p>
+        </div>
+   </div>
+
+   <div class="accordian">
+    <div class="question">
+        <h4>3.What is the best programming language for artificial intelligence projects?</h4>
+        <i class="icon fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="answer">
+      <p>There is no one "best" programming language for artificial intelligence (AI) projects, as different languages have their own strengths and weaknesses. Popular choices include Python, R, and C++, each with its own set of libraries, frameworks, and tools for building AI applications. The choice of language ultimately depends on the specific project requirements, team expertise, and other factors.</p>
+    </div>
+</div>
+
+<div class="accordian">
+    <div class="question">
+        <h4>4.Hidden Interfaces for Ambient Computing</h4>
+        <i class="icon fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="answer">
+      <p>This is one of the most unique and fascinating Google AI projects. In this project, parallel rendering helps to create ultrabright visuals that can penetrate through bare surfaces. This project aims to use rectilinear graphics on low-cost, mass-produced passive-matrix OLED displays to reveal hidden graphic interfaces.</p>
+    </div>
+</div>
+
+<div class="accordian">
+    <div class="question">
+        <h4>5.Real time face detction can handle?</h4>
+        <i class="icon fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="answer">
+      <p>We have all been wearing masks for almost two years due to the Covid-19 outbreak. Many public places, including shopping malls, theatres, and restaurants, refuse to admit anyone who isn't wearing a mask.</p>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    const accordians = document.querySelectorAll(".accordian");
+
+    accordians.forEach(accordian => {
+        const icon = accordian.querySelector('.icon');
+        const answer = accordian.querySelector('.answer');
+
+        accordian.addEventListener('click',() => {
+            if(icon.classList.contains('active')){
+                icon.classList.remove('active');
+                answer.style.maxHeight = null;
+            }else{
+                 icon.classList.add('active');
+                 answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        })
+    })
+</script>
+</body>
+</html>

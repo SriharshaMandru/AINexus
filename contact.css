@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+.navbar h1 {
+    color: #fff;
+    margin: 0;
+}
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.topics li {
+    position: relative;
+}
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.topics a:hover {
+color: orange;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width:  160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+.topics li:hover .dropdown {
+    display: block;
+}
+.login{
+    display: flex;
+    margin-left: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.login button{
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: orangered;
+    border: 0;
+}
+.dropdown2{       
+    background-color: #333;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 160px;
+    margin-top: -195px;
+}
+.dropdown2 a {
+    padding: 12px 16px;
+    display: block;
+}
+.login a:hover{
+    color:blue;
+}
+
+
+
+
+
+
+.shop1 {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.shop1 h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+}
+
+.shop3 {
+    margin-top: 120px;
+    height: 700px;
+    width: 600px;
+    background-color: rgb(245, 242, 242);
+}
+
+.shop4 h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 60px;
+    padding-top: 100px;
+    font-size: 45px;  
+}
+
+.shop4 p {
+    margin-left: 60px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.p1, .p2, .p3 {
+    margin-top: 30px;
+    margin-left: 60px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.p12 p, .p22 p, .p32 p {
+    font-size: 20px;
+}
+
+.sunny h1 {
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.sunny2 {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 30px;
+}
+.sunny2 a{
+    text-decoration: none;
+    color:black;
+}
+.leo2 {
+    height: 700px;
+    width: 600px;
+    margin-top: 120px;
+}
+
+.leo2 span {
+    height: 600px;
+}
+
+.leo {
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+
+ .babai {
+    height: 800px;
+    width: 100%;
+    background-color: rgb(245, 242, 242);
+}
+
+.babai1 h1 {
+    padding-top: 150px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+}
+
+.babai2, .babai3, .babai4 {
+    margin-left: 20px;
+}
+
+.babai2 label, .babai3 label, .babai4 label {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.babai2 input, .babai3 input, .babai4 input {
+    height: 50px;
+    width: 1200px;
+}
+
+.babai4 input {
+    height: 150px;
+    width: 1200px;
+}
+
+.babai button {
+    margin-top: 150px;
+    margin-left: 550px;
+    height: 70px;
+    width: 200px;
+    font-size: 18px;
+    background-color: grey;
+    border: none;
+}
+
+.babai button:hover {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+
+.translate {
+    background-color: grey;
+    margin-top: 100px;
+    height: 150px;
+    padding-top: 60px;
+    display: none;
+    margin-bottom: 40px;
+} 
+.translate h3 {
+    margin-left: 450px;
+    color:green;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
