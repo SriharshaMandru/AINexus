@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+.navbar img{
+    width:150px;
+    height:60px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+/* .navbar h1 {
+    color: #fff;
+    margin: 0;
+} */
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.topics li {
+    position: relative;
+}
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.topics a:hover {
+color: orange;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width:  160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+.topics li:hover .dropdown {
+    display: block;
+}
+.login{
+    display: flex;
+    margin-left: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.login button{
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: orangered;
+    border: 0;
+    padding:5px;
+}
+.dropdown2{       
+    background-color: #333;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 160px;
+    margin-top: -195px;
+}
+.dropdown2 a {
+    padding: 12px 16px;
+    display: block;
+}
+.login a:hover{
+    color:blue;
+}
+.login  button:hover{
+    background-color: orange;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 300px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button {
+    width: 130px;
+    padding: 10px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/nexus.webp">
+        <!-- <h1>AI Nexus</h1> -->
+        <ul class="topics">
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+           
+            <li>
+                <a href="#">Resources</a>
+                <div class="dropdown">
+                    <a href="#" target="_blank">AI Projects</a>
+                    <a href="#" target="_blank">AI Events</a>
+                    <a href="#" target="_blank">AI News</a>
+                    <a href="tutor.html" target="_blank">Tutorials</a>
+                    <div class="dropdown2">
+                        <a href="#" target="_blank">FAQ</a>
+                    <a href="#" target="_blank">Community Forum</a>
+                    <a href="#" target="_blank">Privacy policy</a>
+                    <a href="#" target="_blank">Terms & Conditions</a>
+                    </div>
+
+                </div>
+                
+            </li>
+            <li><a href="#" target="_blank">Contact Us</a></li>
+            </ul>
+            <ul class="login">
+            <li style="margin-top: 5px;"><a href="#" target="_blank">Login</a></li>
+             <li><button><a href="#" id="signup" target="_blank">Sign up</a></button></li>
+                <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+        </ul>
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <div id="error-message"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+
+    if (username === '' || password === '') {
+        errorMessage.textContent = 'Please fill out both fields.';
+    } else {
+        errorMessage.textContent = '';
+        alert('Login successful!');
+        
+       
+    }
+});
+
+    </script>
+</body>
+</html>

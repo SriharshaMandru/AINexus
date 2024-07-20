@@ -89,10 +89,16 @@ body {
     width:100%;
     top:0;
 }
-.navbar h1 {
+.navbar img{
+    width:150px;
+    height:60px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+/* .navbar h1 {
     color: #fff;
     margin: 0;
-}
+} */
 .topics {
     list-style-type: none;
     margin: 0;
