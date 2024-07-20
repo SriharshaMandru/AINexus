@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>communityforum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>  .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(34, 13, 83);
+        padding: 10px 20px;
+        position:fixed;
+        width:95.7%;
+        top:0;
+    }
+    .navbar img{
+        width:150px;
+        height:60px;
+        margin-left: 30px;
+        border-radius: 20px;
+    }
+    /* .navbar h1 {
+        color: #fff;
+        margin: 0;
+    } */
+    .topics {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    .topics li {
+        position: relative;
+    }
+    .topics a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+        font-size: 1.3rem;
+        
+    }
+    .topics a:hover {
+    color: orange;
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        width:  160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: 10px;
+    }
+    .dropdown a {
+        padding: 12px 16px;
+        display: block;
+    }
+    .dropdown a:hover {
+        background-color: white;
+        color: black;
+    }
+    .topics li:hover .dropdown {
+        display: block;
+    }
+    .login{
+        display: flex;
+        margin-left: 100px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+        
+    }
+    .login a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+        font-size: 1.3rem;
+        
+    }
+    .login button{
+        height: 35px;
+        width: 140px;
+        border-radius: 20px;
+        background-color: orangered;
+        border: 0;
+    }
+    .dropdown2{       
+        background-color: #333;
+        min-width: 230px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        margin-left: 160px;
+        margin-top: -195px;
+    }
+    .dropdown2 a {
+        padding: 12px 16px;
+        display: block;
+    }
+    .login a:hover{
+        color:blue;
+    }
+        .head{
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+            color: #004c3f;
+            margin-top: 100px;
+        }
+        .head input{
+            height: 50px;
+            width: 500px;
+            font-size: 20px;
+            color: #004c3f;
+        }
+        .A{
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 50px;
+        }
+        .A1{
+            height: 200px;
+            width: 280px;
+            border: 1px solid #d8dadd;
+            border-radius: 10px;
+            box-shadow: 15px 15px 18px #D2D5D9;
+            font-family: Arial, sans-serif;
+            padding: 10px 10px;
+        }
+        .A1:hover{
+            border-color: #004c3f;
+            box-shadow:  25px 25px 18px #D2D5D9;
+        }
+        .AA1 {
+            margin-left: 20px;
+        }
+        .AA1 i{
+            font-size: 30px;
+            margin-top: 10px;
+            color: #004c3f;
+        }
+       
+        .AA2{
+            display: flex;
+            column-gap: 50px;
+            margin-left: 20px;
+        }
+        .AA2 i{
+            margin-top: 10px;
+        }
+        .B{
+            margin-top: 100px;
+            width: 100%;
+        }
+        .BB{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 40px;
+            row-gap: 50px;
+            margin-left: 20px;
+        }
+        .b h1{
+            text-align: center;
+            color: #004c3f;
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+        }
+        .b1 img{
+            height: 250px;
+            width: 200px;
+            border-radius: 50%;
+            transition-duration: 5s;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .b1 img:hover{
+            height: 320px;
+            width: 300px;
+        }
+        .B1{
+            height: 350px;
+            width: 600px;
+            box-shadow:  25px 25px 18px #D2D5D9;
+            border-radius: 10px;
+            display: flex;
+            column-gap: 20px;
+        }
+        .B1:hover{
+            border:1px solid #004c3f;
+        }
+        .C{
+            text-align: center;
+            margin-top: 100px;
+        }
+        .C h1{
+             height: 50px;
+             width: 250px;
+             color: white;
+             background-color: #004c3f;
+             margin-left: 520px;
+             border-radius: 5px;
+        }
+        .C input{
+              height: 40px;
+              width: 600px;
+              font-size: 20px;
+              color: #004c3f;
+        }
+        .C button{
+                height: 40px;
+                width: 150px;
+                color: white;
+                background-color: #004c3f;
+                border: none;
+                font-size: 20px;
+                border-radius: 5px;
+        }
+        .C button:hover{
+            background-color: #056152;
+        }
+ 
+        .footer{
+            height: 500px;
+            width: 100%;
+            background-color: #004c3f;
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+        }
+        .footer1{
+            display: flex;
+            column-gap: 100px;
+        }
+        .footer img{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .f1 p{
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        .f1{
+            margin-top: 50px;
+        }
+        .f1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition-duration: 1s;
+        }
+        .f1 a:hover{
+            color:rgb(92, 170, 206);
+            font-size: 25px;
+        }
+        .ic {
+            display: flex;
+            column-gap: 30px;
+            margin-left: 30px;
+        }
+        .ic a{
+            font-size: 30px;
+        }
+        .down h1{
+           font-size: 20px;
+           margin-top: 30px;
+           margin-left: 30px;
+        }
+        .footer{
+            height: 500px;
+            width: 100%;
+            background-color:rgb(34, 13, 83);
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+        }
+        .footer1{
+            display: flex;
+            column-gap: 100px;
+        }
+        .footer img{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .f1 p{
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        .f1{
+            margin-top: 50px;
+        }
+        .f1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition-duration: 1s;
+        }
+        .f1 a:hover{
+            color:rgb(92, 170, 206);
+            font-size: 25px;
+        }
+        .ic {
+            display: flex;
+            column-gap: 30px;
+            margin-left: 30px;
+        }
+        .ic a{
+            font-size: 30px;
+        }
+        .down h1{
+           font-size: 20px;
+           margin-top: 30px;
+           margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <nav class="navbar">
+            <img src="images/nexus.wabp.png">
+            <!-- <h1>AI Nexus</h1> -->
+            <ul class="topics">
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="aboutus.html" target="_blank">About</a></li>
+               
+                <li>
+                    <a href="#">Resources</a>
+                    <div class="dropdown">
+                        <a href="projects.html" target="_blank">AI Projects</a>
+                        <a href="AIEVENTS.html" target="_blank">AI Events</a>
+                        <a href="news.html" target="_blank">AI News</a>
+                        <a href="tutor.html" target="_blank">Tutorials</a>
+                        <div class="dropdown2">
+                        <a href="faq.html" target="_blank">FAQ</a>
+                        <a href="communityforum.html" target="_blank">Community Forum</a>
+                        <a href="privacy.html" target="_blank">Privacy policy</a>
+                        <a href="terms.html" target="_blank">Terms & Conditions</a>
+                        </div>
+    
+                    </div>
+                    
+                </li>
+                <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                </ul>
+                <ul class="login">
+                <li style="margin-top: 5px;"><a href="login.html" target="_blank">Login</a></li>
+                 <li> <button><a href="signup.html" target="_blank">Sign up</a></button></li>
+                    <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+            </ul>
+        </nav>
+        <div class="head">
+            <h1>Community Forum</h1>
+            <p>All things Communicate and commerce</p>
+            <input type="text" placeholder="Search Your Community....">
+        </div>
+        <div class="A">
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Reaserch AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  44763</p>
+                <p><i class="fa-regular fa-clock"></i>  51 Seconds ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Industrial AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  76763</p>
+                <p><i class="fa-regular fa-clock"></i>  61 Minutes ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Ethical AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  94763</p>
+                <p><i class="fa-regular fa-clock"></i>  22 Minutes ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Open AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  56763</p>
+                <p><i class="fa-regular fa-clock"></i>  41 Seconds ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Machine Learning AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  95963</p>
+                <p><i class="fa-regular fa-clock"></i>  39 Minutes ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Cloud Computing AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  33263</p>
+                <p><i class="fa-regular fa-clock"></i>  2 Hour ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Natural Language AI</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  64763</p>
+                <p><i class="fa-regular fa-clock"></i>  5 Hour ago</p>
+                </div>
+            </div>
+            <div class="A1">
+                <div class="AA1">
+                <i class="fa-solid fa-message"></i>
+                <h2>Artificial Intelligence</h2>
+                <p>All Things Are In Here.....</p>
+                </div>
+                <div class="AA2">
+                <p><i class="fa-regular fa-message"></i>  24763</p>
+                <p><i class="fa-regular fa-clock"></i>  1 Hour ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="B">
+            <div class="b">
+               <h1>User Profiles</h1>
+            </div>
+            <div class="BB">
+                <div class="B1">
+                    <div class="b1">
+                        <img src="images/e1.avif">
+                    </div>
+                    <div class="b2">
+                        <h1>Jessy</h1>
+                        <p>Introducing Professor Smith, your guide through the "Good Course" 
+                            Webflow Template – a place where you can learn about design, no- 
+                            code, coding, and marketing, all in one spot. Professor Smith is like 
+                             an art expert who knows how to make things look great.</p>
+                    </div>
+                </div>
+                <div class="B1">
+                    <div class="b1">
+                        <img src="images/e2.jpg">
+                    </div>
+                    <div class="b2">
+                        <h1>Alexy</h1>
+                        <p>Introducing Professor Smith, your guide through the "Good Course" 
+                            Webflow Template – a place where you can learn about design, no- 
+                            code, coding, and marketing, all in one spot. Professor Smith is like 
+                             an art expert who knows how to make things look great.</p>
+                    </div>
+                </div>
+                <div class="B1">
+                    <div class="b1">
+                        <img src="images/e3.jpg">
+                    </div>
+                    <div class="b2">
+                        <h1>jessica</h1>
+                        <p>Introducing Professor Smith, your guide through the "Good Course" 
+                            Webflow Template – a place where you can learn about design, no- 
+                            code, coding, and marketing, all in one spot. Professor Smith is like 
+                             an art expert who knows how to make things look great.</p>
+                    </div>
+                </div>
+                <div class="B1">
+                    <div class="b1">
+                        <img src="images/e4.jpg">
+                    </div>
+                    <div class="b2">
+                        <h1>Jessy</h1>
+                        <p>Introducing Professor Smith, your guide through the "Good Course" 
+                            Webflow Template – a place where you can learn about design, no- 
+                            code, coding, and marketing, all in one spot. Professor Smith is like 
+                             an art expert who knows how to make things look great.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="C">
+        <h1>Ask Questions</h1>
+        <input type="text" placeholder="Enter Your Question...."><br><br>
+        <button>Submit</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer1">
+        <div class="f1">
+            <img src="images/nexus.wabp.png">
+            <p>AI Nexus An Artficial Inteligence</p>
+            <div class="ic">
+                <div>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div>
+            <a href="https://x.com/?lang=en"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+                <div>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </div>
+        </div>
+        <div class="f1">
+            <h1>Main Pages</h1>
+            <a href="">Home</a><br><br>
+            <a href="aboutus.html" target="_blank">About Us</a><br><br>
+            <a href="communityforum.html" target="_blank">Community Forum</a><br><br>
+        </div>
+        <div class="f1">
+            <h1>Get Support</h1>
+            <a href="">Contact</a><br><br>
+            <a href="">FAQ</a><br><br>
+            <a href="">Privacy Policy</a><br><br>
+            <a href="">Terms and Conditions</a>
+        </div>
+        <div class="f1">
+            <h1>Resource</h1>
+            <a href="AIEVENTS.html" target="_blank">AI Events</a><br><br>
+            <a href="projects.html">AI Projects</a><br><br>
+            <a href="">News</a><br><br>
+            <a href="tutor.html">Tutorials</a><br><br>
+            <a href="">Research Papers</a>
+        </div>
+        </div>
+        <br><br><br><br><br><hr>
+        <div class="down">
+            <h1>@ 2024 AI Nexus</h1>
+        </div>
+    </div>
+    <script>
+         let input = document.querySelector(".C input");
+         let btn = document.querySelector(".C button");
+         btn.addEventListener("click",function() { 
+           input.value = "Thank You For Your Question";
+           input.style.color = "white";
+           input.style.textAlign = "center";
+           input.style.backgroundColor ="#004c3f";         
+         });
+
+    </script>
+</body>
+</html>

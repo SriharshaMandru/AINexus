@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 13, 83);
+    padding: 10px 20px;
+    position:fixed;
+    width:95.7%;
+    top:0;
+}
+.navbar img{
+    width:150px;
+    height:60px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+/* .navbar h1 {
+    color: #fff;
+    margin: 0;
+} */
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.topics li {
+    position: relative;
+}
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.topics a:hover {
+color: orange;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width:  160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+.topics li:hover .dropdown {
+    display: block;
+}
+.login{
+    display: flex;
+    margin-left: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.login button{
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: orangered;
+    border: 0;
+}
+.dropdown2{       
+    background-color: #333;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 160px;
+    margin-top: -195px;
+}
+.dropdown2 a {
+    padding: 12px 16px;
+    display: block;
+}
+.login a:hover{
+    color:blue;
+}
+        .bg{
+            background-image: url(images/bg\ events.png);
+            height: 550px;
+            width: 100%;
+            background-size: cover;
+        }
+        .bg h1{
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+            font-size: 60px;
+            font-family: Arial, sans-serif;
+        }
+        .bg p{
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+        }
+        .a h1{
+            text-align: center;
+            margin-top: 100px;
+            background-color: blueviolet;
+            animation: heman 3s steps(40,end), blink-caret .75s step-end infinite;
+            
+        }
+        @keyframes heman{
+            from{
+                   width: 0;
+            }
+            to{
+                 width: 100%;
+            }
+        }
+        .AA{
+            display: flex;
+            column-gap: 40px; 
+        }
+        .B{
+            width: 500px;
+            height: 700px;
+            position: sticky;
+            top:-400px;
+        }
+        .B a{
+            font-family: Arial, sans-serif;
+            margin-left: 10px;
+            text-decoration: none;
+            color: black;
+            
+        }
+        .B h2:hover{
+            text-decoration: underline;
+        }
+        .C{
+            width: 700px;
+            padding: 10px 10px;
+        }
+        .C p{
+            font-size: 20px;
+        }
+        .C img {
+            height: 400px;
+            width: 700px;
+        }
+        .C iframe{
+            height: 400px;
+            width: 700px;
+        }
+        .footer{
+            height: 500px;
+            width: 100%;
+            background-color:rgb(34, 13, 83);
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+        }
+        .footer1{
+            display: flex;
+            column-gap: 100px;
+        }
+        .footer img{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .f1 p{
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        .f1{
+            margin-top: 50px;
+        }
+        .f1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition-duration: 1s;
+        }
+        .f1 a:hover{
+            color:rgb(92, 170, 206);
+            font-size: 25px;
+        }
+        .ic {
+            display: flex;
+            column-gap: 30px;
+            margin-left: 30px;
+        }
+        .ic a{
+            font-size: 30px;
+        }
+        .down h1{
+           font-size: 20px;
+           margin-top: 30px;
+           margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <nav class="navbar">
+            <img src="images/nexus.wabp.png">
+            <!-- <h1>AI Nexus</h1> -->
+            <ul class="topics">
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="aboutus.html" target="_blank">About</a></li>
+               
+                <li>
+                    <a href="#">Resources</a>
+                    <div class="dropdown">
+                        <a href="projects.html" target="_blank">AI Projects</a>
+                        <a href="AIEVENTS.html" target="_blank">AI Events</a>
+                        <a href="news.html" target="_blank">AI News</a>
+                        <a href="tutor.html" target="_blank">Tutorials</a>
+                        <div class="dropdown2">
+                        <a href="faq.html" target="_blank">FAQ</a>
+                        <a href="communityforum.html" target="_blank">Community Forum</a>
+                        <a href="privacy.html" target="_blank">Privacy policy</a>
+                        <a href="terms.html" target="_blank">Terms & Conditions</a>
+                        </div>
+    
+                    </div>
+                    
+                </li>
+                <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                </ul>
+                <ul class="login">
+                <li style="margin-top: 5px;"><a href="login.html" target="_blank">Login</a></li>
+                 <li> <button><a href="signup.html" target="_blank">Sign up</a></button></li>
+                    <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+            </ul>
+        </nav>
+        <div class="bg">
+            <h1>Artificial Intelligence & <br>Machine Learning<br>Events</h1>
+            <p>Curated list of the best AI & ML events, conferences, summits,<br>
+                 exhibitions, workshops, and trainings</p>
+        </div>
+        <div class="A">
+           <div class="a">
+            <h1>10 Top AI Events You Don’t Want to Miss in 2024</h1>
+           </div>
+            <div class="AA">
+            <div class="B">
+                <h1>In Summary: The Top AI Events To<br> Attend In 2024</h1><br>
+                <a href="#c1"><h2>1.Tech & AI LIVE London 2024</h2></a>
+                <a href="#c2"><h2>2.Microsoft Build</h2></a>
+                <a href="#c3"><h2>3.Canadian AI Conference</h2></a>
+                <a href="#c4"><h2>4.AI DevSummit 2024</h2></a>
+                <a href="#c5"><h2>5.AI for Good Global Summit</h2></a>
+                <a href="#c6"><h2>6.The Data+AI Summit San Francisco</h2></a>
+                <a href="#c7"><h2>7.The AI Summit London</h2></a>
+                <a href="#c8"><h2>8.IEEE Conference on Artificial Intelligence</h2></a>
+                <a href="#c9"><h2>9.Generative AI Summit</h2></a>
+                <a href="#c10"><h2>10.Ai4 2024</h2></a>
+            </div>
+            <div class="C">
+                <div id="c1">
+                <h1>1. Tech & AI LIVE London 2024</h1>
+                <iframe src="https://www.youtube.com/embed/NM_WXEN8DyA?si=l751WdW4rpOc0T7K"></iframe>
+                <p>Date: May 21, 2024<br>
+                    Location: London, UK<br>
+                    Overview: Tech & AI LIVE London is a virtual AI conference happening in London where
+                     you get a day-long immersive learning and networking experience focused on 
+                     the European landscape.<br><br>
+                     You get to rub shoulders with industry giants like DXC Technology, Ericsson, Microsoft, 
+                     and NetApp as they share insights on the European tech landscape. You also get to engage
+                    with the latest initiatives and trends in AI, diversity & inclusion, and monetization
+                    through interactive panel discussions and fireside chats.
+                    This AI event provides a dedicated virtual platform for you to connect 
+                    with professionals globally.<br><br>
+                    Register:<a href=""> Tech & AI LIVE London 2024</a><br><br></p>
+                    </div>
+                    <div id="c2">
+                <h1>2. Microsoft Build</h1>    
+                <img src="images/2.webp">
+                <p>At this event, you get insights into creating new features and opportunities with AI and 
+                    copilots, alongside deep dives into the latest tech.<br><br>
+                    I also think Microsoft will have a lot to say about its plans for AI. If this isn’t one of 
+                    the top AI events to attend in 2024, I don’t know what is!<br><br>
+                    Register: <a href="">Microsoft Build</a><br><br></p>
+                    </div>
+                    <div id="c3">
+                <h1>3. Canadian AI Conference</h1>    
+                <img src="images/3.webp">
+                <p>Date: May 27-31, 2024<br>
+                    Location: Guelph, Ontario, Canada<br>
+                    Overview: This is a top AI event in Canada for AI research and innovation, covering a broad 
+                    spectrum of AI topics and fostering collaboration between academia and industry.<br><br>
+                    If you’re interested in the latest AI research and networking with leading experts 
+                    and innovators, then this event is your guy!<br><br>
+                    Register:<a href=""> Canadian AI Conference</a><br><br></p>
+                    </div>
+                    <div id="c4">
+                <h1>4. AI DevSummit 2024</h1>
+                <img src="images/4.webp">
+                <p>Date: May 29-30, 2024<br>
+                    Location: San Francisco, California, USA<br>
+                    Overview: AI DevSummit is the world’s largest artificial intelligence dev event, covering
+                     chatbots, machine learning, open-source AI libraries, AI for the enterprise, and deep 
+                     AI/neural networks.<br><br>
+                    
+                    This AI conference majorly targets software engineers and data scientists who are looking 
+                    for an introduction to AI, and AI dev professionals looking for a landscape view on the 
+                    newest AI technologies.<br><br>
+                    
+                    Sounds like you?<br>
+                    
+                    Register:<a href=""> AI DevSummit 2024</a><br><br></p>
+                    </div>
+                    <div id="c5">
+                <h1>5. AI for Good Global Summit</h1>    
+                <img src="images/5.webp">
+                <p>Date: May 30-31, 2024<br>
+                    Location: Geneva Switzerland<br>
+                    Overview: AI for Good Global Summit is one of the top AI conferences happening in Geneva.
+                     You get to experience fresh state-of-the-art AI solutions and cutting-edge knowledge that 
+                     are aligned with UN SDGs and responsible AI.<br><br>
+                    
+                    Have you seen the wild array of speakers?<br>
+                    Register:<a href=""> The AI Summit San Francisco</a></p>
+                    </div>
+                    <div id="c6">
+                <h1>6. The Data+AI Summit San Francisco</h1>    
+                <img src="images/6.webp">
+                <p>Date: June 10-13, 2024<br>
+                    Location: San Francisco, California, USA<br>
+                    Overview: Data+AI Summit is looking to bring together leading experts, researchers, and 
+                    enthusiasts to discuss the latest advancements and trends in AI technology and explore the 
+                    convergence of data and AI.<br><br>
+                    
+                    What can you expect at this AI event? Keynotes, panel discussions, and workshops cover machine
+                     learning, natural language processing, computer vision, and more.<br><br>
+                    
+                    Register:<a href=""> The AI Summit San Francisco</a></p>
+                    </div>
+                    <div id="c7">
+                <h1>7. The AI Summit London</h1>
+                <iframe src="https://www.youtube.com/embed/oB_CnR4cq60?si=trBqsyLcFqkjz-MA"></iframe>
+                <p>Date: June 12-13, 2024<br>
+                    Location: London, UK<br>
+                    Overview: The AI Summit facilitates collaboration between technologists and business professionals,
+                     exploring and propelling AI applications into the world.<br><br>
+                    
+                    With sessions, workshops, and networking opportunities, you get to discover the newest AI trends 
+                    and products.<br><br>
+                    
+                    Register:<a href="register.html">The AI Summit London</a></p>   
+                    </div>
+                    <div id="c8">
+                <h1>8. IEEE Conference on Artificial Intelligence</h1>  
+                <img src="images/8.webp">
+                <p>Date: June 25-27, 2024<br>
+                    Location: Marina Bay Sands, Singapore<br>
+                    Overview: The IEEE CAI 2024 conference is that AI event that focuses on exhibiting AI
+                     applications and key AI verticals. Attendees can explore the latest breakthroughs, research, 
+                     and networking opportunities across various AI domains.<br><br>
+                    
+                    Register:<a href=""> IEEE Conference on Artificial Intelligence</a></p>
+                    </div>
+                    <div id="c9">   
+                <h1>9. Generative AI Summit</h1>  
+                <iframe src="https://www.youtube.com/embed/Qhfyc498qsM?si=MQsSOLGl60-jYiZW"></iframe>
+                <p>Date: 20th-22nd May, 2024<br>
+                    Location: London, UK<br>
+                    Overview: You get to explore the latest developments in generative artificial intelligence
+                     at The Generative AI Summit – covering topics like GANs, creative AI, and AI-driven content
+                      generation.<br><br>
+                    
+                    Expect talks, workshops, and demonstrations that provide valuable insights into the creative 
+                    potential of AI technology at this top AI event!<br><br>
+                    
+                    Register:<a href=""> Generative AI Symposium</a></p>  
+                    </div>
+                    <div id="c10">
+                <h1>10. Ai4 2024</h1>    
+                <img src="images/10.webp">
+                <p>Date: August 12-14, 2024<br>
+                    Location: Las Vegas, Nevada, USA<br>
+                    Overview: With over 350 speakers, more than 150 exhibitors, and 4,500+ attendees, Ai4 2024 is one 
+                    of the biggest AI events in the ecosystem.<br><br>
+                    
+                    It covers the newest advancements and applications shaping the AI landscape and encourages 
+                    responsible adoption of machine learning and artificial intelligence.<br><br>
+                    
+                    Register: <a href="">Ai4 2024</a></p>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div class="footer1">
+            <div class="f1">
+                <img src="images/nexus.wabp.png">
+                <p>AI Nexus An Artficial Inteligence</p>
+                <div class="ic">
+                    <div>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div>
+                <a href="https://x.com/?lang=en"><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
+                    <div>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="f1">
+                <h1>Main Pages</h1>
+                <a href="">Home</a><br><br>
+                <a href="aboutus.html" target="_blank">About Us</a><br><br>
+                <a href="communityforum.html" target="_blank">Community Forum</a><br><br>
+            </div>
+            <div class="f1">
+                <h1>Get Support</h1>
+                <a href="">Contact</a><br><br>
+                <a href="">FAQ</a><br><br>
+                <a href="">Privacy Policy</a><br><br>
+                <a href="">Terms and Conditions</a>
+            </div>
+            <div class="f1">
+                <h1>Resource</h1>
+                <a href="AIEVENTS.html" target="_blank">AI Events</a><br><br>
+                <a href="projects.html">AI Projects</a><br><br>
+                <a href="">News</a><br><br>
+                <a href="tutor.html">Tutorials</a><br><br>
+                <a href="">Research Papers</a>
+            </div>
+            </div>
+            <br><br><br><br><br><hr>
+            <div class="down">
+                <h1>@ 2024 AI Nexus</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

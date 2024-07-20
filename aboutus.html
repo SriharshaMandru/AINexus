@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .contain{
+            background-color: rgb(223, 214, 214);
+            width: 100%;
+            height: 100%;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(34, 13, 83);
+    padding: 10px 20px;
+    position:fixed;
+    width: 95.7%;
+    top:0;
+}
+.navbar img{
+    width:150px;
+    height:60px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+/* .navbar h1 {
+    color: #fff;
+    margin: 0;
+} */
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.topics li {
+    position: relative;
+}
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.topics a:hover {
+color: orange;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width:  160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+.topics li:hover .dropdown {
+    display: block;
+}
+.login{
+    display: flex;
+    margin-left: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;
+    
+}
+.login button{
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: orangered;
+    border: 0;
+}
+.dropdown2{       
+    background-color: #333;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 160px;
+    margin-top: -195px;
+}
+.dropdown2 a {
+    padding: 12px 16px;
+    display: block;
+}
+.login a:hover{
+    color:blue;
+}
+        .head h1{
+            padding-top: 100px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 50px;
+            height: 200px;
+            width: 100%;
+            color: white;
+            background-color: rgb(12, 22, 59);
+        }
+        .AA{
+            display: flex;
+            column-gap: 30px;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        .A{
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+        .A h1{
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .A p{
+            margin-left: 10px;
+        }
+        .B{
+            width: 400px;
+        }
+        .B p{
+            width: 390px;
+            height: 350px;
+            margin-top: 50px;
+            padding: 10px 10px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+        .B img{
+            height: 350px;
+            width: 400px;
+            margin-top: -100px;
+            border-radius: 10px;
+        }
+        
+        .C{
+            text-align: center;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+        .ph img{
+            height: 500px;
+            width: 90%;
+            border-radius: 20px;
+            margin-left: 60px;
+        }
+        .f{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 50px;
+            margin-left: 40px;
+        }
+        .f1{
+            height: 520px;
+            width: 350px;
+            padding: 20px 20px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+        .f1 img{
+            height: 350px;
+            width: 300px;
+            border-radius: 10px;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .f1 img:hover{
+            height: 400px;
+            width: 350px;
+        }
+        .founder{
+            margin-top: 100px;
+        }
+        .ff h1{
+            height: 50px;
+            width: 500px;
+            text-align: center;
+            padding: 10px 10px;
+            margin-left: 380px;
+            border-radius: 10px;
+            background-color: black;
+            color: #f0f0f0;
+        }
+    
+
+        .h img{
+            height: 350px;
+            width: 400px;
+            border-radius: 10px;
+            transition-property: all;
+            transition-duration: 3s;
+        }
+        .h img:hover{
+            height: 300px;
+            width: 350px;
+        }
+        
+        .h2{
+            display: flex;
+            column-gap: 40px;
+            margin-top: 100px;
+            margin-left: 20px;
+            width: 1200px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        .h2:hover, .h3:hover, .h4:hover, .h5:hover, .h6:hover, .h7:hover{
+            background-color: rgb(135, 196, 196);
+        }
+        .h3{
+            display: flex;
+            column-gap: 40px;
+            margin-top: 20px;
+            width: 1200px;
+            margin-left: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        .h4{
+            display: flex;
+            column-gap: 40px;
+            margin-top: 20px;
+            width: 1200px;
+            margin-left: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        .h5{ display: flex;
+            column-gap: 40px;
+            margin-top: 20px;
+            width: 1200px;
+            margin-left: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        .h6{
+            display: flex;
+            column-gap: 40px;
+            margin-top: 20px;
+            width: 1200px;
+            margin-left: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        .h7{
+            display: flex;
+            column-gap: 40px;
+            margin-top: 20px;
+            width: 1200px;
+            margin-left: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+        
+        .h1{
+            margin-top: 100px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .footer{
+            height: 500px;
+            width: 100%;
+            background-color: rgb(34, 13, 83);
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+        }
+        .footer1{
+            display: flex;
+            column-gap: 100px;
+        }
+        .footer img{
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .ff1 p{
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        .ff1{
+            margin-top: 50px;
+        }
+        .ff1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition-duration: 1s;
+        }
+        .ff1 a:hover{
+            color:rgb(92, 170, 206);
+            font-size: 25px;
+        }
+        .ic {
+            display: flex;
+            column-gap: 30px;
+            margin-left: 30px;
+        }
+        .ic a{
+            font-size: 30px;
+        }
+        .down h1{
+           font-size: 20px;
+           margin-top: 30px;
+           margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <nav class="navbar">
+            <img src="images/nexus.wabp.png">
+            <!-- <h1>AI Nexus</h1> -->
+            <ul class="topics">
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="aboutus.html" target="_blank">About</a></li>
+               
+                <li>
+                    <a href="#">Resources</a>
+                    <div class="dropdown">
+                        <a href="projects.html" target="_blank">AI Projects</a>
+                        <a href="AIEVENTS.html" target="_blank">AI Events</a>
+                        <a href="news.html" target="_blank">AI News</a>
+                        <a href="tutor.html" target="_blank">Tutorials</a>
+                        <div class="dropdown2">
+                        <a href="faq.html" target="_blank">FAQ</a>
+                        <a href="communityforum.html" target="_blank">Community Forum</a>
+                        <a href="privacy.html" target="_blank">Privacy policy</a>
+                        <a href="terms.html" target="_blank">Terms & Conditions</a>
+                        </div>
+    
+                    </div>
+                    
+                </li>
+                <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                </ul>
+                <ul class="login">
+                <li style="margin-top: 5px;"><a href="login.html" target="_blank">Login</a></li>
+                 <li> <button><a href="signup.html" target="_blank">Sign up</a></button></li>
+                    <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+            </ul>
+        </nav>
+       <div class="head">
+        <h1>About Us</h1>
+       </div>
+      <div class="AA">  
+        <div class="A">
+            <h1>MISSION<br> AND <br>VISION</h1>
+            <p>Computer vision is a field of artificial intelligence (AI) that uses machine learning
+                 and neural networks to teach computers and systems to derive meaningful information from
+                  digital images, videos and other visual inputs—and to make recommendations or take actions
+                   when they see defects or issues.
+                  </p>
+        </div>
+        <div class="B">
+           <img src="images/1603194693061.jpeg">
+           <p>AI Nexus Healthcare is creating a new generation of smart health and wellness applications 
+            powered by Cognitive Artificial Intelligence and designed to help shape the future of healthcare 
+            around the world.<br><br>
+            Under the free plan of Nexus, you are able to create one research project and within each project
+             you can upload a total of 2 papers per project, and then you can ask an unlimited number of questions 
+             to each PDF.<br><br>
+             Under the free plan of Nexus, you are able to create one research project and within each project you can
+              upload a total of 2 papers per project, and then you can ask an unlimited
+               number of questions to each</p>
+        </div>
+        <div class="C">
+            <h1>250 Million +</h1>
+            <p>People using AI tools globally went past 250 million in 2023,
+                 more than doubling from the 2020 number. This growth in AI
+                  tool users is expected to continue, pushing past 700 million
+                   by the end of the decade.</p>
+            <h1>200 Million +</h1>     
+            <p>Usage of AI in everyday life include: Virtual assistants like Siri and Alexa.
+                 Personalized content recommendations on streaming platforms. Fraud detection 
+                 systems in banking.24 Jun 2024</p>  
+        </div>
+     </div>
+     <div class="ph">
+        <img src="images/all.jpeg">
+     </div>  
+     <div class="founder">
+       <div class="ff">
+        <h1>Information About The AI Team</h1>
+       </div>
+        <div class="f">
+        <div class="f1">
+            <img src="images/ai f 1.jpg">
+            <h1>Alan Turing</h1>
+            <p> Often regarded as the father of theoretical computer science and AI, 
+                Turing laid down the foundations for computation and proposed the famous 
+                Turing Test as a measure of machine intelligence</p>
+        </div>
+        <div class="f1">
+            <img src="images/ai f2.jpeg">
+            <h1>John McCarthy</h1>
+            <p> Coined the term "artificial intelligence"
+                 in 1956 and was instrumental in organizing the famous Dartmouth Conference,
+                  which is considered the birth of AI as a field.</p>
+        </div>
+        <div class="f1">
+            <img src="images/ai f3.webp">
+            <h1>Marvin Minsky</h1>
+            <p> A prominent cognitive scientist and co-founder of the MIT AI Laboratory, 
+                Minsky made significant contributions to AI research, including work on neural
+                 networks and robotics.</p>
+        </div>
+        <div class="f1">
+            <img src="images/ai f4.jpg">
+            <h1>Herbert Simon</h1>
+            <p>  Together with Allen Newell, Simon developed the Logic Theorist and introduced the
+                 idea of "bounded rationality," which influenced AI research and cognitive psychology.</p>
+        </div>
+        <div class="f1">
+            <img src="images/ai f5.jpg">
+            <h1>Arthur Samuel</h1>
+            <p>  Pioneered machine learning research and is known for developing the first 
+                self-learning program, which played checkers.</p>
+        </div>
+        <div class="f1">
+            <img src="images/ai f6.jpeg">
+            <h1>Claude Shannon</h1>
+            <p>  A mathematician and electrical engineer, Shannon's work laid the groundwork for 
+                information theory, which is essential for understanding communication and 
+                computation in AI systems.</p>
+        </div>
+        </div>
+     </div> 
+    
+     <div class="h">
+        <div class="h1">
+            <h1>History Of AI Nexus</h1>
+        </div>
+        <div class="h2">
+            <div class="hh2">
+                <img src="images/h3.jpg">
+            </div>
+            <div class="hh2">
+            <h1>AI-Informed Defensive Strategies</h1>
+            <p>As new AI software is leveraged in cyber operations, AI-informed defensive strategies may become a
+               determining factor in properly securing our networks. SecurityWeek recently highlighted at a Cyber
+               Insights Conference how AI software is commonly used for anomaly detection in computer networks,
+               such as identifying malware, active adversarial activity, or indications of compromise on a system.
+               What’s more, AI software is now also used to automate other cybersecurity processes,
+               such as isolating a compromised device.<br><br><br> 
+               Additionally, a recent study in Electronics demonstrated that proactive measures leveraging
+               ML models for threat detection are becoming essential to stopping cyberattacks. For example,
+               neural networks, deep reinforcement learning, and autoencoders are examples of AI-based
+               models that have been identified as critical to robust cybersecurity responses. Moreover,
+               a comprehensive survey published in the UAE indicates that AI-enabled software may be one 
+               of few applications that can detect when other AI systems have “poisoned” information or
+               data on a computer.</p>
+               </div>
+               </div>
+               <div class="h3">
+                <div class="hh3">
+            <h1>Explainable AI Models in Cybersecurity</h1>   
+            <p>Most human users do not understand the purpose of ML algorithms and how they function. 
+                 In 2019, the Defense Advanced Research Projects Agency initiated ground-breaking
+                  research to address this issue and explore the importance of XAI in creating systems
+                   whose models and decisions can be understood by human users. However, according to a 
+                   recent IEEE study, despite the widespread use of AI for cybersecurity anomaly detection, 
+                   most ML algorithms are deployed in a “black box manner, meaning that security experts and 
+                   customers are unable to explain how such procedures reach particular conclusions.” This 
+                   opacity decreases user confidence in these models and underemphasizes their limitations 
+                   in addressing diverse cyber intrusions. Yet applying XAI in cybersecurity bolsters user 
+                   trust and helps manage cyber defense mechanisms when they fall short, by providing clear
+                    reviews of how the models functioned. For example:<br><br><br>
+                    </p>
+                    </div>
+                    <div class="hh3">
+                        <img src="images/h4.jpg">
+                    </div>
+                    </div>
+                <div class="h4">
+                    <div class="hh4">
+                        <img src="images/h5.jpg">
+                    </div>
+                    <div class="hh4">
+                <li>Malware Analysis – XAI models can extract rules applied in neural networks that identify mobile 
+                malware behaviors and present them with accuracy estimations to users. Additionally, these rules 
+                can be compiled by analysts to create hacker profiles and malware classification methodologies.</li><br><br>
+                <li>Botnet Operations – XAI models can enhance human-to-machine interactions for botnet operation 
+                detection, which requires feature classification that can demand immense computational resources.
+                 By having the human user provide active feedback on the classifications used in XAI models, 
+                 these systems can overcome resource demands more quickly and improve the transparency of the 
+                 botnet prediction process.</li><br><br>
+                <li>Distributed Denial of Service (DDoS) Attacks – XAI models can translate the flow of data from 
+                DDoS packets to track the origination of these attacks and assist with attribution.</li><br><br>
+                As AI models are used more often for intrusion detection, software reverse engineering, website
+                 fingerprinting, and other applications, the models that are explainable may prove to be more
+                  resilient and effective at blocking cyber threats by enhancing security flaw identification, 
+                  error remediation for human users, and attribution capabilities. 
+                  </div>
+                  </div>
+                  <div class="h5">
+                    <div class="hh5">
+             <h1>The Democratization of AI Inputs</h1>    
+             <p>Another trend emerging this year is the democratization of AI inputs, which is lowering barriers
+                to the automation of cybersecurity practices. As Dr. Patrick Shafto writes, AI product developers
+                and academic groups have published their algorithmic models, code, and data sources to move
+                toward open source systems, which allow for constructive feedback, community-driven innovation,
+                and increased transparency on functionality. Additionally, the Association of Information
+                Systems has found that this movement to democratize AI and make AI components more accessible
+                to groups with limited knowledge and experience can bestow the capability to automate
+                cybersecurity practices.<br><br><br></p>
+                </div>
+                <div class="hh5">
+                    <img src="images/h6.webp">
+                </div>
+                </div>
+                <div class="h6">
+                    <div class="hh6">
+                        <img src="images/h7.png">
+                    </div>
+                    <div class="hh6">
+                <p>
+                An example is the use of “no-code tools,” which enable users to develop AI-based platforms without
+                advanced technological competencies or coding skills, according to one recent study from Umeå 
+                University in Sweden. According to forthcoming research from the Jamk University of Applied Sciences, 
+                these platforms are becoming more affordable for organizations that could benefit from automating 
+                cybersecurity practices, but  lack the resources to create and analyze complex algorithmic systems.
+                While there are significant benefits to democratizing AI inputs for public use, SlashNext’s work
+                tracking cybercrime tools has shown how malicious actors can exploit or weaponize these models 
+                to enhance their own operations. Additionally, if these models are uninterpretable for users, 
+                they may lack robust security long-term. Therefore, the democratization of AI inputs may create
+                further vulnerabilities that counterbalance the benefits organizations would reap from automating
+                their cybersecurity practices. <br><br><br></p>
+                </div>
+                </div>
+                <div class="h7">
+                    <div class="hh7">
+                <p>
+                These three trends at the nexus of cybersecurity and AI are fundamentally changing the digital 
+                landscape and while their consequences remain uncertain, their development is worth watching in
+                the coming months. AI-informed defensive strategies and XAI models may significantly improve 
+                cybersecurity protocols, however, the current movement to democratize AI will introduce vulnerabilities
+                to our digital systems that will have tradeoffs for cybersecurity. As a common trope in security 
+                circles suggests, you are only as strong as your weakest point. As these trends progress,
+                the cybersecurity community and AI practitioners will need to work together to balance innovative
+                automation with comprehensive security responses. </p>   
+                </div> 
+                <div class="hh7">
+                    <img src="images/h8.jpg">
+                </div>
+                </div>       
+        </div>
+     </div>
+     <div class="footer">
+        <div class="footer1">
+        <div class="ff1">
+            <img src="images/nexus.wabp.png">
+            <p>AI Nexus An Artficial Inteligence</p>
+            <div class="ic">
+                <div>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div>
+            <a href="https://x.com/?lang=en"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+                <div>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </div>
+        </div>
+        <div class="ff1">
+            <h1>Main Pages</h1>
+            <a href="">Home</a><br><br>
+            <a href="aboutus.html" target="_blank">About Us</a><br><br>
+            <a href="communityforum.html" target="_blank">Community Forum</a><br><br>
+        </div>
+        <div class="ff1">
+            <h1>Get Support</h1>
+            <a href="">Contact</a><br><br>
+            <a href="">FAQ</a><br><br>
+            <a href="">Privacy Policy</a><br><br>
+            <a href="">Terms and Conditions</a>
+        </div>
+        <div class="ff1">
+            <h1>Resource</h1>
+            <a href="AIEVENTS.html" target="_blank">AI Events</a><br><br>
+            <a href="projects.html">AI Projects</a><br><br>
+            <a href="">News</a><br><br>
+            <a href="tutor.html">Tutorials</a><br><br>
+            <a href="">Research Papers</a>
+        </div>
+        </div>
+        <br><br><br><br><br><hr>
+        <div class="down">
+            <h1>@ 2024 AI Nexus</h1>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

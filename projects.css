@@ -1,0 +1,412 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 9000px;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0px 20px;   
+    height: 70px;
+    width: 100%;
+    position: fixed;
+}
+.navbar img{
+    width:150px;
+    height:60px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+/* .navbar h1 {
+    color: #fff;
+    margin: 0;
+} */
+.topics {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;   
+}
+.topics li {
+    position: relative;   
+}
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;   
+}
+.topics a:hover {
+color: orange;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width:  160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+.dropdown a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+.topics li:hover .dropdown {
+    display: block;
+}
+.login{
+    display: flex;
+    margin-left: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;   
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 1.3rem;   
+    margin-right: 20px;
+}
+.login a:hover{
+    color:blue;
+}
+.login button{
+    color:blue;
+    background-color: orange;
+}
+.login button{
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: orangered;
+    border: 0;
+    margin-right: 30px;
+}
+.dropdown2{       
+    background-color: #333;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 160px;
+    margin-top: -195px;
+}
+.dropdown2 a {
+    padding: 12px 16px;
+    display: block;
+}
+.project{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+}
+.project h1{
+    padding-top: 200px;
+    margin-left: 100px;
+    font-family: sans-serif;
+}
+.project p{
+    margin-left: 100px;
+    color: grey;
+}
+.project button{
+    margin-top: 30px;
+}
+.project1{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.project1 p{
+    font-size: 1.3rem;
+}
+.showcase{
+    margin-top: 100px;
+    display: flex;
+    column-gap: 100px;
+    margin-left: 200px;
+}
+.ongoing{
+    height: 350px;
+    width: 500px;
+    border: 5px solid;
+    border-radius: 20px;
+}
+.ongoing a{
+    text-decoration: none;
+}
+.completed{
+    height: 350px;
+    width: 500px;
+    border: 5px solid;
+    border-radius: 20px;
+}
+.completed a{
+    text-decoration: none;
+}
+.completed h1{
+    text-align: center;
+}
+.ongoing h1{
+    text-align: center;
+}
+.ongoing li{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-left: 60px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.completed li{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.resume{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 3.5rem;
+}
+.fraser{
+    margin-left: 100px;
+}
+.fraser p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.fake-news{
+    margin-top: 70px;
+    margin-left: 100px;
+
+}
+.fake-news p{
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+.pro{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.pro p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.pro img{
+    margin-left: 300px;
+}
+.insta{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.insta p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.object{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.object p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.object img{
+    margin-left: 950px;
+    margin-top: -400px;
+}
+.table{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 3.5rem;
+}
+.animal{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.animal p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.machine{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.machine p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.machine img{
+    margin-left: 220px
+}
+.face{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.face p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.face img{
+    margin-left: 400px;
+}
+.face iframe{
+    margin-left: 150px;
+    margin-top: 60px;
+}
+.fuel{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.fuel p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.plant{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.plant p{
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+.plant h3{
+    text-align: center;
+}
+.plant img{
+    margin-left: 400px;
+}
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sunny {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.sisi {
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+}
+
+section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#paperListings {
+    flex: 2;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.paper-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.paper-item:hover {
+    background-color: #f0f0f0;
+}
+
+.review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+
+
+.footer{
+    height: 500px;
+    width: 100%;
+    background-color: #004c3f;
+    border-radius: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 200px;
+}
+.footer1{
+    display: flex;
+    column-gap: 100px;
+}
+.footer img{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.f1 p{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.f1{
+    margin-top: 50px;
+}
+.f1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+.f1 a:hover{
+    color:rgb(92, 170, 206);
+    font-size: 25px;
+}
+.ic {
+    display: flex;
+    column-gap: 30px;
+    margin-left: 30px;
+}
+.ic a{
+    font-size: 30px;
+}
+.down h1{
+   font-size: 20px;
+   margin-top: 30px;
+   margin-left: 30px;
+}
