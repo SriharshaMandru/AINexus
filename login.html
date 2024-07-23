@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <style>
-    body {
+   
+   body {
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -21,7 +22,7 @@
     box-sizing: border-box;
 } */
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,10 +38,7 @@
     margin-left: 30px;
     border-radius: 20px;
 }
-/* .navbar h1 {
-    color: #fff;
-    margin: 0;
-} */
+
 .topics {
     list-style-type: none;
     margin: 0;
@@ -125,7 +123,7 @@ color: orange;
 .login  button:hover{
     background-color: orange;
     color: blue;
-}
+} */
 
 
 
@@ -185,11 +183,13 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
-
+a {
+    text-decoration: none;
+    color:white;
+}
 button:hover {
     background-color: #0056b3;
 }
-
 #error-message {
     color: red;
     text-align: center;
@@ -198,7 +198,7 @@ button:hover {
 
 
 
-.footer{
+/* .footer{
         height: 500px;
         width:100%;
         background-color: rgb(34, 13, 83);
@@ -247,7 +247,7 @@ button:hover {
        font-size: 20px;
        margin-top: 30px;
        margin-left: 30px;
-    }
+    } */
 
 
 
@@ -255,9 +255,9 @@ button:hover {
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <a href="AinexusMain.html"><img src="images/nexus.wabp.png"></a>
-        <!-- <h1>AI Nexus</h1> -->
+    
         <ul class="topics">
             <li><a href="home.html" target="_blank">Home</a></li>
             <li><a href="aboutus.html" target="_blank">About</a></li>
@@ -284,9 +284,9 @@ button:hover {
             <ul class="login">
             <li style="margin-top: 5px;"><a href="login.html" target="_blank">Login</a></li>
              <li> <button><a href="signup.html" target="_blank">Sign up</a></button></li>
-                <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+                
         </ul>
-    </nav>
+    </nav> -->
 
 
 
@@ -302,14 +302,14 @@ button:hover {
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+           <button type="submit">Login</button>
             <div id="error-message"></div>
         </form>
     </div>
 
 
     
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="footer1">
         <div class="ff1">
             <img src="images/nexus.webp">
@@ -352,7 +352,7 @@ button:hover {
         <div class="down">
             <h1>@ 2024 AI Nexus</h1>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -366,9 +366,9 @@ button:hover {
 
 
 
-    <script>
+     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+        event.preventDefault(); 
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -376,13 +376,27 @@ button:hover {
 
     if (username === '' || password === '') {
         errorMessage.textContent = 'Please fill out both fields.';
-    } else {
+    } 
+    else if(username =="sriharsha" && password =="harsha@4"){
         errorMessage.textContent = '';
         alert('Login successful!');
-        
-       
+        window.location.href = "home.html";
     }
-});
+    else if(username =="vivek" && password =="vivek@3"){
+        errorMessage.textContent = '';
+        alert('Login successful!');
+        window.location.href = "home.html";
+    }
+    else if(username =="sisindri" && password =="sisindri@4"){
+        errorMessage.textContent = '';
+        alert('Login successful!');
+        window.location.href = "home.html";
+    }
+    else {
+        errorMessage.textContent = '';
+        alert('Invalid Login');
+    }
+}); 
 
     </script>
 </body>

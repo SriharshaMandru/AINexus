@@ -17,7 +17,7 @@
 
 
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,10 +33,7 @@
     margin-left: 30px;
     border-radius: 20px;
 }
-/* .navbar h1 {
-    color: #fff;
-    margin: 0;
-} */
+
 .topics {
     list-style-type: none;
     margin: 0;
@@ -125,7 +122,7 @@ color: orange;
 
 
 
-
+ */
 
 
 
@@ -190,10 +187,19 @@ button:hover {
     text-align: center;
     margin-top: 10px;
 }
+.rg{
+    margin-top: 40px;
+    margin-left: 90px;
+}
+.rg a {
+    text-decoration: none;
+    color:blue;
+}
 
 
 
-.footer{
+
+/* .footer{
         height: 500px;
         width:100%;
         background-color: rgb(34, 13, 83);
@@ -244,7 +250,7 @@ button:hover {
        margin-left: 30px;
     }
 
-
+ */
 
 
 
@@ -257,13 +263,12 @@ button:hover {
 </head>
 <body>
 
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <a href="AinexusMain.html"><img src="images/nexus.wabp.png"></a>
-        <!-- <h1>AI Nexus</h1> -->
+
         <ul class="topics">
             <li><a href="home.html" target="_blank">Home</a></li>
             <li><a href="aboutus.html" target="_blank">About</a></li>
-           
             <li>
                 <a href="#">Resources</a>
                 <div class="dropdown">
@@ -276,8 +281,7 @@ button:hover {
                     <a href="communityforum.html" target="_blank">Community Forum</a>
                     <a href="privacy.html" target="_blank">Privacy policy</a>
                     <a href="terms.html" target="_blank">Terms & Conditions</a>
-                    </div>
-
+                   </div>
                 </div>
                 
             </li>
@@ -286,9 +290,9 @@ button:hover {
             <ul class="login">
             <li style="margin-top: 5px;"><a href="login.html" target="_blank">Login</a></li>
              <li> <button><a href="signup.html" target="_blank">Sign up</a></button></li>
-                <!-- <li> <a href=""></a><button>Sign up</button></li> -->
+    
         </ul>
-    </nav>
+    </nav> -->
 
 
 
@@ -312,12 +316,15 @@ button:hover {
             <div class="input-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <p id="message"></p>
             </div>
             <div class="input-group">
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" id="sign">Sign Up</button>
+            <div class="rg"><a href="login.html">Already registered</a></div>
+
             <div id="error-message"></div>
         </form>
     </div>
@@ -325,7 +332,7 @@ button:hover {
 
 
 
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="footer1">
         <div class="ff1">
             <img src="images/nexus.webp">
@@ -368,7 +375,7 @@ button:hover {
         <div class="down">
             <h1>@ 2024 AI Nexus</h1>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -394,9 +401,13 @@ button:hover {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     const errorMessage = document.getElementById('error-message');
-
+    const message = document.getElementById("message");
+    const signup = document.getElementById("sign"); 
+   
+    
     
     errorMessage.textContent = '';
+    message.textContent = '';
 
    
     if (username === '' || email === '' || password === '' || confirmPassword === '') {
@@ -408,7 +419,6 @@ button:hover {
         errorMessage.textContent = 'Passwords do not match.';
         return;
     }
-
     
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
@@ -417,9 +427,30 @@ button:hover {
     }
 
     
-    alert('Signup successful!');
+    if (password.length < 5) {
+        message.textContent = 'Password must be at least 5 characters long.';
+        message.style.color = '#dc3545'; 
+    } else if (!/[A-Z]/.test(password)) {
+        message.textContent = 'Password must contain at least one uppercase letter.';
+        message.style.color = '#dc3545';
+    } else if (!/[a-z]/.test(password)) {
+        message.textContent = 'Password must contain at least one lowercase letter.';
+        message.style.color = '#dc3545';
+    } else {
+        message.textContent = 'Password is valid!';
+        message.style.color = '#28a745';
+         
+        signup.addEventListener("click",redirect());
 
+        function redirect() {
+        window.location.href = "login.html";
+}       alert("signup successful");
+    }
+     
+
+   
 });
+     
 
     </script>
 </body>
